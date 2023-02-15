@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*################## start navbar style ##################*/
+nav {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
+    box-shadow: 2px 2px rgb(236, 226, 226);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+nav .logo {
+    width: 20%;
+
+}
+
+nav .menu {
+    width: 60%;
+
+}
+
+nav .nav-icons {
+    width: 20%;
+
+}
+
+nav .menu .list {
+    display: flex;
+    justify-content: center;
+}
+
+nav .menu .list .items {
+    margin-right: 2.5rem;
+}
+
+nav .menu .list .items a {
+    text-transform: capitalize;
+    color: #141517;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+
+nav .nav-icons {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav .nav-icons a {
+    margin-left: 2rem;
+    color: #000000;
+
+}
+
+nav .menu .list .items a:hover {
+    color: #ff003c;
+    transition: color 0.4s;
+}
+
+nav .menu .list .items:nth-child(4)::after {
+    content: 'HOT';
+    position: absolute;
+    top: 15px;
+    background-color: #ff003c;
+    border-radius: 7px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    padding: 4px 6px;
+    font-size: 11px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+nav .menu .list .items .dropdown-latestItem {
+    position: absolute;
+    top: 80px;
+    background-color: white;
+    padding: 25px 16px;
+    width: 14%;
+    border-top: 2px solid #ff003c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    visibility: hidden;
+
+}
+
+nav .menu .list .items .dropdown-latestItem .latestitem {
+    margin-bottom: 15px;
+}
+
+nav .menu .list .items .dropdown-latestItem::before {
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid #ff003c;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -22px;
+}
+
+nav .menu .list .items:nth-child(4):hover .dropdown-latestItem {
+    visibility: visible;
+
+}
+
+nav .menu .list .items .dropdown-blogItem {
+    position: absolute;
+    top: 80px;
+    background-color: white;
+    padding: 25px 16px;
+    width: 14%;
+    border-top: 2px solid #ff003c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    visibility: hidden;
+}
+
+nav .menu .list .items .dropdown-blogItem .blogitem {
+    margin-bottom: 15px;
+}
+
+nav .menu .list .items .dropdown-blogItem::before {
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid #ff003c;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -22px;
+}
+
+nav .menu .list .items:nth-child(5):hover .dropdown-blogItem {
+    visibility: visible;
+
+}
+
+nav .menu .list .items .dropdown-pagesItem {
+    position: absolute;
+    top: 80px;
+    background-color: white;
+    padding: 25px 16px;
+    width: 14%;
+    border-top: 2px solid #ff003c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    visibility: hidden;
+}
+
+nav .menu .list .items .dropdown-pagesItem .pagesitem {
+    margin-bottom: 15px;
+}
+
+nav .menu .list .items .dropdown-pagesItem::before {
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid #ff003c;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -22px;
+}
+
+nav .menu .list .items:nth-child(6):hover .dropdown-pagesItem {
+    visibility: visible;
+
+}
+
+nav .nav-icons a:hover {
+    color: #ff003c;
+    transition: color 0.4s;
+}
+
+nav label,
+#inpChecked {
+    display: none;
+}
+
+
+
+/*################# end navbar style ###################*/
+
+/*################## start header style ###############*/
+header {
+    background-color: #f0f0f2;
+}
+
+.container {
+    width: 83%;
+    margin: auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .container .header-content {
+    width: 75%;
+    animation-name: contentLeft;
+    animation-duration: 2s;
+
+}
+
+header .container .header-img {
+    width: 35%;
+    animation-name: imgScale;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    padding-right: 20px;
+}
+
+header .container .header-img img {
+    width: 100%;
+}
+
+header .container .header-content h1 {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #0b1c39;
+
+}
+
+header .container .header-content p {
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #212025;
+    margin-bottom: 7%;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+header .container .header-content .btn {
+    background-color: #4a4a4b;
+    padding: 20px 29px;
+    position: relative;
+    border: 1px solid transparent;
+    z-index: 1;
+}
+
+header .container .header-content .btn a {
+    font-weight: 600;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 0.03rem;
+    font-size: 17px;
+    text-transform: uppercase;
+
+}
+
+header .container .header-content .btn::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -1px;
+    top: -1px;
+    z-index: -1;
+    transition: width 0.5s;
+    background-color: #ff2020;
+
+}
+
+header .container .header-content .btn:hover::before {
+    width: 100%;
+    border: 1px solid transparent;
+
+}
+
+@keyframes contentLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes imgScale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/*############### end header style ##################*/
+
+/*############### start section arrival style ##################*/
+.arrivals .container {
+    padding-top: 14%;
+    padding-bottom: 15%;
+}
+
+.arrivals .container h2 {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: "Josefin Sans", sans-serif;
+    padding-bottom: 4rem;
+}
+
+.arrivals .container .item-arrivals .item {
+    width: 31%;
+}
+
+.arrivals .container .item-arrivals .item .item-img {
+    overflow: hidden;
+}
+
+.arrivals .container .item-arrivals .item .item-img img {
+    width: 100%;
+}
+
+.arrivals .container .item-arrivals .item .item-info {
+    text-align: center;
+}
+
+.arrivals .container .item-arrivals .item .item-info h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.arrivals .container .item-arrivals .item .item-info a {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.arrivals .container .item-arrivals .item .item-info span {
+    color: #ff2020;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.arrivals .container .item-arrivals .item .item-img:hover img {
+    transform: scale(1.1);
+    transition-duration: 2s;
+}
+
+.arrivals .container .item-arrivals {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+/*############### end section arrival style ##################*/
+
+/*############### start section gallery style ##################*/
+.gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery .item-gallery {
+    width: 25%;
+    height: 680px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .item-gallery img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition-duration: 2s;
+    object-fit: cover;
+}
+
+.gallery .item-gallery:nth-child(1) {
+    width: 50%;
+}
+
+.gallery .item-gallery:nth-child(3) .column-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.gallery .item-gallery:nth-child(3) .column-gallery .item-gallery {
+    width: 100%;
+    height: 330px;
+}
+
+
+.gallery .item-gallery:nth-child(1):hover img {
+    transform: scale(1);
+}
+
+.gallery .item-gallery:nth-child(2):hover img {
+    transform: scale(1);
+}
+
+.gallery .item-gallery .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1, 10, 28, 0.3);
+    z-index: -1;
+    opacity: 0;
+}
+
+.gallery .item-gallery:nth-child(1):hover .overlay {
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.gallery .item-gallery:nth-child(2):hover .overlay {
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/*############### end section gallery style ##################*/
+
+
+/*############### start section populat style ##################*/
+.popular .container {
+    padding-top: 15%;
+    padding-bottom: 7%;
+}
+
+
+.popular .container .title {
+    text-align: center;
+    width: 53%;
+    margin: auto;
+
+}
+
+.popular .container .title h2 {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.popular .container .title p {
+    font-family: "Roboto", sans-serif;
+    color: #777;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10%;
+}
+
+.popular .container .popular-items .item .item-info span {
+    color: #444444;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.popular .container .popular-items .item {
+    width: 31%;
+    overflow: hidden;
+}
+
+.popular .container .popular-items .item .item-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular .container .popular-items .item .item-img img {
+    border-bottom: 2px solid #ff2020;
+    width: 100%;
+}
+
+.popular .container .popular-items .item .item-img i.fa-heart {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 30px;
+    color: #333333;
+    opacity: 0;
+    transition: opacity 0.2s;
+    visibility: hidden;
+}
+
+.popular .container .popular-items .item .item-img:hover i.fa-heart {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popular .container .popular-items .item .item-img .addCart {
+    position: absolute;
+    left: 0%;
+    bottom: -62px;
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+    background-color: #ff2020;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    transition: bottom 1s;
+
+}
+
+.popular .container .popular-items .item .item-img:hover .addCart {
+    bottom: 0;
+}
+
+.popular .container .popular-items .item .item-info {
+    text-align: center;
+}
+
+.popular .container .popular-items .item .item-info h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.popular .container .popular-items .item .item-info a {
+    color: #444444;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.popular .container .popular-items .item .item-info span {
+    color: #444444;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.popular .container .popular-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn:not(header .container .header-content .btn) {
+    background-color: #ff2020;
+    padding: 28px 29px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 8% auto;
+    border: 1px solid transparent;
+}
+
+.btn a {
+    font-weight: 600;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    letter-spacing: 0.03rem;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -1px;
+    top: -1px;
+    z-index: -1;
+    transition: width 0.5s;
+    background-color: #4a4a4b;
+}
+
+
+.btn:hover::before {
+    width: 100%;
+    border: 1px solid transparent;
+}
+
+/*############### end section popular style ##################*/
+
+/*############### start section video-timeZone style ##################*/
+
+.video-timeZone {
+    background-image: url(../image/sectin_bg1.png);
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.video-timeZone .fa-play {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #fff;
+    line-height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.video-timeZone .fa-play:hover {
+    color: #ff2020;
+    background-color: #fff;
+}
+
+.video-timeZone:hover .fa-play {
+    transform: scale(1.1);
+}
+
+#Checked {
+    display: none;
+}
+
+.video-timeZone .thumb-content {
+    width: 34%;
+    background-image: url(../image/vidoe_more.png);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 22%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-timeZone .thumb-content h3 {
+    color: #ffffff;
+    font-size: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 40px;
+}
+
+.video-timeZone .thumb-content a {
+    color: #fff;
+    font-size: 30px;
+}
+
+.video-timeZone .video {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#Checked:checked+.video {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s;
+}
+
+#Checked:checked+.thumb-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+
+
+
+/*############### end section video-timeZone style ##################*/
+
+
+/*############### start section choice style ##################*/
+.choice .container .choice1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12rem;
+    align-items: center;
+}
+
+.choice .container .choice-info {
+    width: 45%;
+}
+
+.choice .container .choice-img {
+    width: 45%;
+}
+
+.choice .container .choice-img img {
+    width: 100%;
+}
+
+.choice .container .choice-info h2 {
+    color: #000;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 40px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.choice .container .choice-info p {
+    margin-bottom: 50px;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    color: #777;
+    line-height: 30px;
+}
+
+.choice .container .choice-info .btn {
+    margin-left: 1px !important;
+    padding: 23px 28px !important;
+}
+
+.choice .container .choice2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+
+}
+
+
+
+/*############### end section choice style ##################*/
+
+/*############### start section about style ##################*/
+.about .container {
+    padding-top: 15rem;
+}
+
+.about .container .about-item {
+    background-color: #ea0000;
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 20px 30px 45px;
+}
+
+.about .container .about-item .item {
+    width: 32%;
+}
+
+.about .container .about-item .item i {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #ffff;
+}
+
+.about .container .about-item .item h6 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+
+.about .container .about-item .item p {
+    font-size: 16px;
+    color: #d3d1d1;
+    font-family: "Roboto", sans-serif;
+    line-height: 30px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.about .container .about-timeZone {
+    padding-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about .container .about-timeZone .about-timeZone-info {
+    width: 25%;
+}
+
+.about .container .about-timeZone .about-timeZone-info p {
+    color: #868c98;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: "Roboto", sans-serif;
+    padding-top: 35px;
+}
+
+.about .container .about-timeZone .about-timeZone-title {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+.about .container .about-timeZone .about-timeZone-title  .title{
+    width:30%;
+}
+
+.about .container .about-timeZone .about-timeZone-title .title h4 {
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 29px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.2;
+}
+
+.about .container .about-timeZone .about-timeZone-title .title ul li {
+    margin-bottom: 15px;
+
+}
+
+.about .container .about-timeZone .about-timeZone-title .title ul li a {
+    color: #868c98;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    transition: 0.5s;
+}
+
+.about .container .about-timeZone .about-timeZone-title .title ul li a:hover  {
+    color: #ff2020;
+    padding-left: 5px;
+}
+
+/*############### end section about style ##################*/
+
+/*############### start footer ##################*/
+footer .container {
+    padding-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10rem;
+}
+
+footer .container p {
+    color: #888888;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 2;
+    font-family: "Roboto", sans-serif;
+}
+
+footer .container p i {
+    color: #ff2020;
+    font-weight: 900;
+}
+
+footer .container p a {
+    color: #ff2020;
+}
+
+footer .container .footer-icon {
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+footer .container .footer-icon i {
+    color: #222222;
+    transition: 0.5s;
+}
+
+footer .container .footer-icon i:hover {
+    color: #ff2020;
+    transform: rotatey(180deg);
+}
+
+/*############### end footer ##################*/

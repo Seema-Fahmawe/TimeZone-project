@@ -1,0 +1,337 @@
+@media (max-width:991px) {
+    .container {
+        width: 85%;
+    }
+
+    /*############### start navbar #################*/
+    nav .menu .list {
+        display: block;
+    }
+nav .menu .list .items{
+    margin-bottom: 20px;
+}
+    nav .menu {
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left:0%;
+        padding: 28px 18px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99999;
+    }
+  
+    nav {
+        position: relative;
+    }
+
+    nav .menu .list .items:nth-child(4)::after {
+        display: none;
+    }
+
+    nav .menu .list {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    nav .menu .list .items a{
+        color:#fff;
+    }
+    nav .menu .list .items .dropdown-latestItem,
+    nav .menu .list .items .dropdown-blogItem,
+    nav .menu .list .items .dropdown-pagesItem {
+        display: none;
+    }
+
+    nav label {
+        display: block;
+        order: 1;
+    }
+
+    nav .nav-icons a,
+    nav label {
+        font-size: 20px;
+    }
+
+    #inpChecked:checked+.menu {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.4s;
+    }
+
+    /*################ end navbar ################*/
+
+
+    /*################ start header ################*/
+    header .container .header-content h1 {
+        font-size: 50px;
+        line-height: 1.2;
+        margin-bottom: 26px;
+    }
+
+    header .container .header-img {
+        width: 40%;
+    }
+
+    header .container .header-img img {
+        width: 100%;
+    }
+
+    /*################ end header ################*/
+
+    /*################ start section arrival ################*/
+    .arrivals .container .item-arrivals .item {
+        width: 45%;
+    }
+
+    .arrivals .container .item-arrivals {
+        flex-wrap: wrap;
+    }
+
+
+    /*################ end section arrival ################*/
+
+    /*############### start section gallery  ##################*/
+
+    .gallery .item-gallery {
+        width: 45%;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+    .gallery .item-gallery:nth-child(3) .column-gallery {
+        flex-direction: row;
+    }
+
+    .gallery .item-gallery:nth-child(3) {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*############### end section gallery  ##################*/
+
+    /*############### start section popular ##################*/
+    .popular .container .popular-items .item {
+        width: 47%;
+    }
+
+    .popular .container .title {
+        width: 100%;
+    }
+
+    /*############### end section popular ##################*/
+    .video-timeZone .thumb-content {
+        height: 10%;
+        flex-direction: column;
+    }
+
+    /*############### start section choice ##################*/
+    .choice .container .choice1 {
+        padding-top: 5rem;
+    }
+
+    .choice .container .choice2 {
+        padding-top: 3rem;
+    }
+
+    .choice .container .choice-info {
+        width: 50%;
+    }
+
+    .choice .container .choice-info h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .choice .container .choice-info p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .choice .container {
+        margin-left: 1%;
+        width: 97%;
+    }
+
+    /*############### end section choice ##################*/
+
+    /*############### start section about ##################*/
+    .about .container {
+        padding-top: 5rem;
+    }
+
+    .about .container .about-item .item {
+        width: 45%;
+    }
+
+    .about .container .about-item {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .about .container .about-item .item p {
+        width: 100%;
+    }
+
+    .about .container .about-timeZone {
+        flex-wrap: wrap;
+        padding-top: 5rem;
+    }
+
+    .about .container .about-timeZone .about-timeZone-info {
+        width: 100%;
+    }
+
+    .about .container .about-timeZone .about-timeZone-title {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    .about .container .about-timeZone .about-timeZone-title .title h4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .about .container .about-timeZone .about-timeZone-title  .title{
+        width: 100%;
+    }
+    /*############### end section about ##################*/
+
+    /*############### start footer ##################*/
+    footer .container {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        display: block;
+    }
+
+    /*############### end footer ##################*/
+
+}
+
+
+@media (max-width:768px) {
+
+    /*############### start section choice ##################*/
+    .choice .container .choice1 {
+        flex-wrap: wrap;
+        padding-top: 5rem;
+        padding-left: 2rem;
+    }
+
+    .choice .container .choice-info {
+        width: 100%;
+    }
+
+    .choice .container .choice-img {
+        width: 70%;
+    }
+
+    .choice .container .choice2 {
+        flex-direction: column-reverse;
+        padding-top: 5rem;
+        padding-left: 2rem;
+        align-items: flex-start;
+    }
+
+    /*############### end section choice ##################*/
+
+    /*############### start section about ##################*/
+    .about .container .about-item .item {
+        width: 100%;
+    }
+
+    /*############### end section about ##################*/
+
+
+}
+
+@media (max-width:575px) {
+
+    /*############## start navbar ################*/
+    nav .logo {
+        width: 25%;
+    }
+
+    nav .logo img {
+        width: 100%;
+    }
+
+    nav .nav-icons a,
+    label {
+        font-size: 17px;
+    }
+
+    /*############## end navbar ###############*/
+
+
+    /*################ start header ################*/
+    header .container {
+        padding-left: 50px;
+        width: 100%;
+    }
+
+    header .container .header-img {
+        display: none;
+    }
+
+    header .container .header-content h1 {
+        font-size: 33px;
+    }
+
+    header .container .header-content p {
+        width: 90%;
+    }
+
+    header .container .header-content {
+        width: 100%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    /*################ end header ################*/
+
+    /*################ start section arrival ################*/
+    .arrivals .container .item-arrivals .item {
+        width: 100%;
+    }
+
+    /*################ end section arrival ################*/
+
+    /*############### start section gallery  ##################*/
+    .gallery .item-gallery {
+        width: 100%;
+    }
+
+    .gallery .item-gallery:nth-child(1) {
+        width: 100%;
+    }
+
+    .gallery .item-gallery:nth-child(3) .column-gallery {
+        flex-wrap: wrap;
+    }
+
+    /*############### end section gallery  ##################*/
+
+
+    /*############### start section popular  ##################*/
+    .popular .container .popular-items .item {
+        width: 100%;
+    }
+
+    /*############### end section popular  ##################*/
+
+    /*############### start section about  ##################*/
+    .about .container .about-item {
+        padding: 43px 10px 30px 20px;
+    }
+
+    /*############### end section about  ##################*/
+
+    /*############### start footer  ##################*/
+    footer .container p {
+        font-size: 15px;
+    }
+
+    /*############### end footer  ##################*/
+}
